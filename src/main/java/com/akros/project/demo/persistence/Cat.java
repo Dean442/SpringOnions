@@ -1,17 +1,16 @@
-package com.akros.project.demo.data;
+package com.akros.project.demo.persistence;
 
-import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity(name = "CAT")
 @Table()
 @Getter
 @Setter
 @RequiredArgsConstructor
+@NoArgsConstructor
 public class Cat {
 
     @Id
@@ -20,26 +19,29 @@ public class Cat {
     @Column(name = "ID")
     private Long id;
 
+    @NonNull
+    @NotNull
     @Column(name = "CAT_NAME")
     private String name;
 
+    @NonNull
+    @NotNull
     @Column(name = "COLOR")
     private String color;
 
+    @NonNull
+    @NotNull
     @Column(name = "CHARACTER")
     private String character;
 
+    @NonNull
+    @NotNull
     @Column(name = "GENDER")
     private String gender;
 
+    @NonNull
+    @NotNull
     @Column(name = "PRICE")
     private int price;
 
-    public Cat(String name, String color, String character, String gender, int price) {
-        this.name = name;
-        this.color = color;
-        this.character = character;
-        this.gender = gender;
-        this.price = price;
-    }
 }

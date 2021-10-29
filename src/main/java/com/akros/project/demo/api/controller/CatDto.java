@@ -2,16 +2,15 @@ package com.akros.project.demo.api.controller;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import javax.validation.constraints.NotNull;
 
-@Data
 @Builder
-@Schema( name = "Cat", description = "Cat schema")
+@RequiredArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class CatDto {
     @NonNull
     @NotNull

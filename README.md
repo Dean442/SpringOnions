@@ -12,8 +12,9 @@ Could also be used as infrastructure for further tests using RestAssured or Post
 
 #### Preparation
 0. start service _(obviously)_
-1. share your screen with the swagger-ui
-2. let the applicant control your screen
+1. open http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/
+2. share your screen with the swagger-ui
+3. let the applicant control your screen
 
 #### Specific scenario
 

@@ -16,9 +16,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest(
         webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT,
         properties = {
-                "server.port=1235",
+                "server.port=1235"
                 // enable if test fails, to get more information in log
-//                "logging.level.au.com.dius.pact=DEBUG"
+//                ,"logging.level.au.com.dius.pact=DEBUG"
         }
 )
 public class CatControllerProviderPactTest {

@@ -101,7 +101,6 @@
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
-				<!-- TODO maven says: not found-->
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<excludes>

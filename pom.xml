@@ -20,7 +20,8 @@
 		<java.version>11</java.version>
 		<springdoc-openapi-ui.version>1.5.12</springdoc-openapi-ui.version>
 		<asciidoctor-maven-plugin.version>1.5.8</asciidoctor-maven-plugin.version>
-		<pact.junit5.version>4.1.7</pact.junit5.version>
+		<pact.junit5.version>4.3.2</pact.junit5.version>
+		<spring-boot-version>2.6.1</spring-boot-version>
 	</properties>
 
 	<dependencies>
@@ -39,16 +40,20 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<version>2.6.1</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
+			<version>${spring-boot-version}</version>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
+			<version>2.0.202</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -59,6 +64,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<version>${spring-boot-version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -69,6 +75,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>${spring-boot-version}</version>
 		</dependency>
 	</dependencies>
 
@@ -101,7 +108,6 @@
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
-				<!-- TODO maven says: not found-->
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<excludes>

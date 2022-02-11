@@ -41,7 +41,7 @@ public class CatController {
     }
 
     @PostMapping(path = "/post", consumes = MediaType.APPLICATION_JSON_VALUE )
-    public ResponseEntity<Cat> postCat(@RequestBody @Valid @NotNull RequestEntity<CatDto> data) {
+    public ResponseEntity<Cat> postCat(@RequestBody @NotNull RequestEntity<CatDto> data) {
 
         CatDto newCat = data.getBody();
         assert newCat != null;

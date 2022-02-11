@@ -14,8 +14,8 @@ import javax.validation.constraints.NotNull;
 public class Cat {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
-    @GenericGenerator(name = "native", strategy = "native")
+    @GenericGenerator(name = "native", strategy = "increment")
+    @GeneratedValue(generator = "native")
     @Column(name = "ID")
     private Long id;
 
@@ -43,5 +43,5 @@ public class Cat {
     @NotNull
     @Column(name = "PRICE")
     private int price;
-
+    
 }
